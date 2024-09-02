@@ -19,6 +19,10 @@ const Index = () => {
                             <button><i class="fa-regular fa-user"></i> <span>Sign Up</span></button>
                         </li>
                     </ul>
+                    <div className="res-link">
+                    <i class="fa-solid fa-bars" style={{color: "#ffffff"}}></i>
+                    <i class="fa-regular fa-user" style={{color: "#ffffff"}}></i>
+                    </div>
                 </div>      
             </div>
         </header>

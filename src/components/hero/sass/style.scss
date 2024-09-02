@@ -22,3 +22,83 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.hero {
+    margin-top: 50px;
+    .hero_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        .hero_img{
+            width: 100%;
+            display: none;
+        }
+        .hero_right {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            h1{
+                color: white;
+                font-size: 35px;
+            }
+            h3{
+                color: white;
+                font-size: 17px;
+                font-weight: 400;
+            }
+            .hero_actions {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                input {
+                    width: 90%;
+                    outline: none;
+                    border: none;
+                    border-radius: 20px;
+                }
+                button{
+                    width: 90%;
+                    height: 45px;
+                    border-radius: 20px;
+                    background-color: #A259FF;
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 570px) {
+    .hero{
+        .hero_wrapper{
+            .hero_right{
+                .hero_title{
+                    h1{
+                        font-size: 40px;
+                        font-weight: 600;
+                    }
+                    h3{
+                        font-size: 20px;
+                        width: 300px;
+                    }
+                }
+                .hero_actions{
+                    input{
+                        width: 325px;
+                        height: 46px;
+                    }
+                    button{
+                        width: 325px;
+                        height: 46px;
+                    }
+                }
+            }
+        }
+    }
+}
