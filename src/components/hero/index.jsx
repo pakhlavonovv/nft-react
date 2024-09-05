@@ -21,9 +21,10 @@ const Index = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        if (form.username === 'User' && form.password === '0101' && form.confirm_pass === '0101') {
+        if (form.username !== '' && form.email && form.password !== '' && form.confirm_pass !== '') {
             navigate('/home')
         } else {
+            alert("You have an error in input, please write full own information.")
             setIsError(true)
         }
     }
@@ -32,75 +33,77 @@ const Index = () => {
         <div>
             <section className='hero'>
                 <div className="container">
-                    
-                <div className="hero_wrapper">
-                    <div className="hero_img">
-                        <img src={Hero} alt="Hero Image" />
+
+                    <div className="hero_wrapper">
+                        <div className="hero_img">
+                            <img src={Hero} alt="Hero Image" />
+                        </div>
+                        <div className="hero_right">
+                            <form onSubmit={handleSubmit}>
+                                <div className="hero_title">
+                                    <h1>Create Account</h1>
+                                    <div className="h3">             
+                                    <h3>Welcome! Enter your details and start creating, collecting, and selling NFTs.</h3>
+                                    </div>
+                                </div>
+                                <div className="hero_actions">
+                                    <input
+                                        type="text"
+                                        name='username'
+                                        placeholder='Username'
+                                        value={form.username}
+                                        onChange={handleChange}
+                                        style={{
+                                            border: isError ? "2px solid red" : "2px solid #ccc",
+                                            padding: "10px",
+                                            borderRadius: "5px",
+                                            outline: "none",
+                                        }}
+                                    />
+                                    <input
+                                        type="email"
+                                        name='email'
+                                        placeholder='Email address'
+                                        value={form.email}
+                                        onChange={handleChange}
+                                        style={{
+                                            border: isError ? "2px solid red" : "2px solid #ccc",
+                                            padding: "10px",
+                                            borderRadius: "5px",
+                                            outline: "none",
+                                        }}
+                                    />
+                                    <input
+                                        type="password"
+                                        name='password'
+                                        placeholder='Password'
+                                        value={form.password}
+                                        onChange={handleChange}
+                                        style={{
+                                            border: isError ? "2px solid red" : "2px solid #ccc",
+                                            padding: "10px",
+                                            borderRadius: "5px",
+                                            outline: "none",
+                                        }}
+                                    />
+                                    <input
+                                        type="password"
+                                        name='confirm_pass'
+                                        placeholder='Confirm Password'
+                                        value={form.confirm_pass}
+                                        onChange={handleChange}
+                                        style={{
+                                            border: isError ? "2px solid red" : "2px solid #ccc",
+                                            padding: "10px",
+                                            borderRadius: "5px",
+                                            outline: "none",
+                                        }}
+                                    />
+                                    <button className='btn-login' type='submit'>Log In</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div className="hero_right">
-                        <form onSubmit={handleSubmit}>
-                            <div className="hero_title">
-                                <h1>Create Account</h1>
-                                <h3>Welcome! Enter your details and start creating, collecting, and selling NFTs.</h3>
-                            </div>
-                            <div className="hero_actions">
-                                <input 
-                                    type="text" 
-                                    name='username' 
-                                    placeholder='Username' 
-                                    value={form.username} 
-                                    onChange={handleChange} 
-                                    style={{
-                                        border: isError ? "2px solid red" : "2px solid #ccc",
-                                        padding: "10px",
-                                        borderRadius: "5px",
-                                        outline: "none",
-                                    }} 
-                                />
-                                <input 
-                                    type="email" 
-                                    name='email' 
-                                    placeholder='Email address' 
-                                    value={form.email} 
-                                    onChange={handleChange}
-                                    style={{
-                                        border: "2px solid #ccc",
-                                        padding: "10px",
-                                        borderRadius: "5px",
-                                        outline: "none",
-                                    }}
-                                />
-                                <input 
-                                    type="password" 
-                                    name='password' 
-                                    placeholder='Password' 
-                                    value={form.password} 
-                                    onChange={handleChange} 
-                                    style={{
-                                        border: isError ? "2px solid red" : "2px solid #ccc",
-                                        padding: "10px",
-                                        borderRadius: "5px",
-                                        outline: "none",
-                                    }} 
-                                />
-                                <input 
-                                    type="password" 
-                                    name='confirm_pass' 
-                                    placeholder='Confirm Password' 
-                                    value={form.confirm_pass} 
-                                    onChange={handleChange} 
-                                    style={{
-                                        border: isError ? "2px solid red" : "2px solid #ccc",
-                                        padding: "10px",
-                                        borderRadius: "5px",
-                                        outline: "none",
-                                    }} 
-                                />
-                                <button className='btn-login' type='submit'>Log In</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
                 </div>
             </section>
         </div>
