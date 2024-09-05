@@ -14,7 +14,6 @@ const index = () => {
                     </div>
                     <div className="right_hero">
                         <img src={HomeHero} alt="" />
-                        <p className='text-white'>Space Walking</p>
                     </div>
                 </div>
             </div>

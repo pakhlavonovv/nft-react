@@ -21,6 +21,7 @@ a {
                 padding: 10px;
                 border-radius: 10px;
                 color: white;
+                transition: all ease 0.4s;
                 &:hover{
                     background-color: transparent;
                     color: #A259FF;
@@ -28,11 +29,32 @@ a {
             }
         }
         .right_hero{
-            background-color: #3B3B3B;
-            height: 300px;
             img{
                 width: 100%;
                 
+            }
+        }
+    }
+}
+@media (min-width: 760px) {
+    .home-hero{
+        margin-top: 100px;
+        .hero_wrapper{
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            gap: 50px;
+            .left_hero{
+                width: 70%;
+                h1{
+                    font-size: 55px;
+                }
+                p{
+                    font-size: 20px;
+                }
+                button{
+                    width: 224px;
+                }
             }
         }
     }

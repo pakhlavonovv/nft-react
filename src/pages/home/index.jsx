@@ -1,10 +1,11 @@
-import {Header, HomeHero, Footer} from '@components'
+import {Header, HomeHero, HomeCollection, Footer} from '@components'
 
 const Index = () => {
   return (
     <>
       <Header/>
       <HomeHero/>
+      <HomeCollection/>
     </>
   )
 }
